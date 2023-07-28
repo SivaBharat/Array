@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Array.Swaping</StartupObject>
+    <StartupObject>Array.ArrayLis</StartupObject>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup />
