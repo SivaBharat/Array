@@ -34,7 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Array.Attendance</StartupObject>
+    <StartupObject>Array.Abstractiondemo</StartupObject>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup />
@@ -52,10 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstractiondemo.cs" />
     <Compile Include="ArrayList.cs" />
     <Compile Include="Attendance.cs" />
     <Compile Include="bonus.cs" />
     <Compile Include="datastruct.cs" />
+    <Compile Include="Enumdemo.cs" />
     <Compile Include="objList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
