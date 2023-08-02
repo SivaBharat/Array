@@ -11,28 +11,33 @@ namespace Array
         public int id { get; set; }
         public string name { get; set; }
         public double salary { get; set; }
-        public virtual void Display()
-        {
-            Console.WriteLine($"Employee id is:{id}");
-            Console.WriteLine($"Employee name is:{name}");
-            Console.WriteLine($"Employee salary is:{salary}");
-        }
+        public string Details() => $"{id} {name} {salary}";
+        
     }
     public class Hr : Employees
     {
         public double bonus { get; set; }
-        public new void Details()
-        {
-            base.Display();
-            Console.WriteLine($"The employee bonus is:{bonus}");
-        }
+        public new string Details() => $"{bonus}....{salary}";
+    }
         internal class Virtualdemo
         {
             public static void Main(string[] args)
             {
-                Hr hr = new Hr { id=123,name="Siva",salary=30000,bonus=2000};
-                hr.Details();
-            }
+
+            Console.WriteLine("enter salary:");
+            double sal = Convert.ToInt64(Console.ReadLine());
+
+            var display = new Hr()
+            {
+                salary = sal,
+                id = 101,
+                name = "Hari",
+            };
+             Console.WriteLine(display.Details());
+             Employees emp = display;
+             Console.WriteLine(emp.Details());
+
+            Console.ReadLine();
         }
-    }
+    }    
 }

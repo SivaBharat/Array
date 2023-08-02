@@ -50,7 +50,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Array.Hr.Virtualdemo</StartupObject>
+    <StartupObject>Array.Trydemo</StartupObject>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup />
@@ -82,15 +82,19 @@
     <Compile Include="datastruct.cs" />
     <Compile Include="Enumdemo.cs" />
     <Compile Include="Interdemo.cs" />
+    <Compile Include="Lambdademo.cs" />
     <Compile Include="objList.cs" />
     <Compile Include="Preprosesordemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="queue.cs" />
+    <Compile Include="Regularexpdemo.cs" />
     <Compile Include="Sealeddemo.cs" />
+    <Compile Include="Simpleintdemo.cs" />
     <Compile Include="Sorting.cs" />
     <Compile Include="Swaping.cs" />
     <Compile Include="taskthree.cs" />
+    <Compile Include="Trydemo.cs" />
     <Compile Include="Virtualdemo.cs" />
   </ItemGroup>
   <ItemGroup>
