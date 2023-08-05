@@ -50,7 +50,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Array.Trydemo</StartupObject>
+    <StartupObject>Array.Filedemo</StartupObject>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup />
@@ -80,10 +80,13 @@
     <Compile Include="Attendance.cs" />
     <Compile Include="bonus.cs" />
     <Compile Include="datastruct.cs" />
+    <Compile Include="Delagatedemo.cs" />
     <Compile Include="Enumdemo.cs" />
+    <Compile Include="Filedemo.cs" />
     <Compile Include="Interdemo.cs" />
     <Compile Include="Lambdademo.cs" />
     <Compile Include="objList.cs" />
+    <Compile Include="Poniterdemo.cs" />
     <Compile Include="Preprosesordemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
