@@ -23,7 +23,8 @@ namespace Array
             Console.WriteLine($"Your discount amount is: {discount}");
             Console.WriteLine($"Your total cost is: {finalCost}");
             Console.WriteLine("-----------------------------------------------------");
-            // Multiplication table
+
+            //b) Multiplication table
             Func<int, int, int> multiplicationTable = GenerateMultiplicationTable;
             Console.WriteLine("Enter the number to generate the multiplication table");
             int number = Convert.ToInt32(Console.ReadLine());
@@ -34,7 +35,8 @@ namespace Array
                 Console.WriteLine($"{number} * {i} = {result}");
             }
             Console.WriteLine("----------------------------------------------------");
-            //Todo list
+
+            //c)Todo list
             Action<List<string>, string> todoList = AddTodoItem;
             List<string> list = new List<string>();
             todoList(list, "Cricket");

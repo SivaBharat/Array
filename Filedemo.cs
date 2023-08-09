@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace Array
 {
-    class Filedemo
+    public class Filedemo
     {
-        static void Main()
+        public static void Main()
         {
 
             string[] netTrainees = { "Siva", "Arun", "Srikanth", "Hemanth", "Vignesh", "Harita", "Yamini" };
-            string[] otherTrainees = { "Karthi", "Dharsan", "Sharon", "Harsan" };
+            string[] otherTrainees = { "Karthi", "Darshan", "Sharon", "Harshan" };
 
-            // a)Write the data to a file
+            //a)Write the data to a file
             string fileName = "DotNetTrainees.txt";
             string copyFile = "Copyfile.txt";
             string movefile = "MoveContent.txt";
@@ -45,6 +45,8 @@ namespace Array
                 Console.WriteLine("Error while reading from the file: " + ex.Message);
             }
             Console.WriteLine("------------------------------------------------------");
+
+
             //b)Adding other trainee details
             try
             {
@@ -95,6 +97,8 @@ namespace Array
                 Console.WriteLine("Error while reading the copied file" + ex.Message);
             }
             Console.WriteLine("------------------------------------------------------");
+
+
             //d)Move content from one file to another
             try
             {
@@ -105,6 +109,9 @@ namespace Array
             {
                 Console.WriteLine("Error while moving the content" + ex.Message);
             }
+            Console.WriteLine("------------------------------------------------------");
+
+
             //e)if file exists delete the file
             try
             {
@@ -124,6 +131,7 @@ namespace Array
             {
                 Console.WriteLine(ex.Message);
             }
+            Console.WriteLine("------------------------------------------------------");
 
             //f)Employee Report
             string[] emp = { "Siva,20000", "Arun,22000", "Srikanth,23000", "Hemanth,25000" };
@@ -139,34 +147,46 @@ namespace Array
             }
 
             try
-        { 
-            string[] readEmployees = File.ReadAllLines(empReport);
-            Console.WriteLine("Employee report:");
-            foreach (string employee in readEmployees)
             {
-                string[] employeeData = employee.Split(',');
-                string name = employeeData[0];
-                double salary = double.Parse(employeeData[1]);
-                double bonus = CalculateBonus(salary);
-                Console.WriteLine($"Name: {name}, Salary: {salary}, Bonus: {bonus}");
+                string[] readEmployees = File.ReadAllLines(empReport);
+                Console.WriteLine("Employee report:");
+                foreach (string employee in readEmployees)
+                {
+                    string[] employeeData = employee.Split(',');
+                    string name = employeeData[0];
+                    double salary = double.Parse(employeeData[1]);
+                    double bonus = CalculateBonus(salary);
+                    Console.WriteLine($"Name: {name}, Salary: {salary}, Bonus: {bonus}");
+                }
             }
+            catch (IOException ex)
+            {
+                Console.WriteLine("Error while reading from the file: " + ex.Message);
+            }
+            Console.WriteLine("------------------------------------------------------");
+
+            //g)Properties
+            FileInfo fileInfo = new FileInfo($"D:/CSharp/Arrays/bin/Debug/{fileName}");
+            Console.WriteLine($"Full name:{fileInfo.FullName}");
+            Console.WriteLine($"Extension:{fileInfo.Extension}");
+            Console.WriteLine($"Directory:{fileInfo.DirectoryName}");
+            Console.WriteLine($"File length:{fileInfo.Length}");
+            Console.WriteLine($"Creation time:{fileInfo.CreationTime}");
+            Console.WriteLine($"Last Access:{fileInfo.LastAccessTime}");
+            Console.WriteLine($"Last update:{fileInfo.LastWriteTime}");            
         }
-        catch (IOException ex)
-        {
-            Console.WriteLine("Error while reading from the file: " + ex.Message);
-        }
-}
         static double CalculateBonus(double salary)
         {
             if (salary > 20000)
             {
-                return salary * 0.1;
+                return salary * 0.2;
             }
             else
             {
                 return 0;
             }
         }
+       
     }
 
 }

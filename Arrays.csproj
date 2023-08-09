@@ -50,8 +50,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Array.Filedemo</StartupObject>
+    <StartupObject>Array.Colordemo</StartupObject>
   </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup />
   <PropertyGroup />
   <PropertyGroup />
@@ -79,9 +80,12 @@
     <Compile Include="ArrayList.cs" />
     <Compile Include="Attendance.cs" />
     <Compile Include="bonus.cs" />
+    <Compile Include="Colordemo.cs" />
     <Compile Include="datastruct.cs" />
+    <Compile Include="Debugdemo.cs" />
     <Compile Include="Delagatedemo.cs" />
     <Compile Include="Enumdemo.cs" />
+    <Compile Include="Eventdemo.cs" />
     <Compile Include="Filedemo.cs" />
     <Compile Include="Interdemo.cs" />
     <Compile Include="Lambdademo.cs" />
