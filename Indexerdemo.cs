@@ -4,62 +4,60 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Array
+namespace Task_0908
 {
-    class Employee2
+    class Employee<T>
     {
-        public string Name { get; set; }
-        public int Id { get; set; }
-        public decimal Salary { get; set; }
-    }
+        private T[] employee = new T[10];
 
-    class EmployeeCollection
-    {
-        private List<Employee2> employees = new List<Employee2>();
-
-       
-        public Employee2 this[int id]
+        public T this[int index]
         {
             get
             {
-                return employees.Find(emp => emp.Id == id);
+                return employee[index];
             }
             set
             {
-                var existingEmployee = employees.Find(emp => emp.Id == id);
-                if (existingEmployee != null)
-                {
-                    existingEmployee.Name = value.Name;
-                    existingEmployee.Salary = value.Salary;
-                }
-                else
-                {
-                    employees.Add(value);
-                }
+                employee[index] = value;
             }
         }
     }
-
-    class Indexerdemo
+    class GenericIndexer
+    {
+        public static void GetDetails()
+        {
+            Employee<int> ID = new Employee<int>();
+            Console.WriteLine("Enter Employee ID : ");
+            ID[0] = Convert.ToInt32(Console.ReadLine());
+            Employee<string> Name = new Employee<string>();
+            Console.WriteLine("Enter Employee Name : ");
+            Name[0] = Console.ReadLine();
+            Employee<string> Designation = new Employee<string>();
+            Console.WriteLine("Enter Employee Designation : ");
+            Designation[0] = Console.ReadLine();
+            Console.WriteLine("-----------------");
+            Console.WriteLine("Employee Details");
+            Console.WriteLine("-----------------");
+            Console.WriteLine("Employee ID : " + ID[0]);
+            Console.WriteLine("Employee Name : " + Name[0]);
+            Console.WriteLine("Employee Designation : " + Designation[0]);
+            Console.WriteLine("------------------");
+        }
+    }
+    internal class Indexer
     {
         static void Main(string[] args)
         {
-            EmployeeCollection employeeCollection = new EmployeeCollection();
-
-            employeeCollection[50] = new Employee2 { Id = 101, Name = "Siva", Salary = 20000 };     
-
-            int employeeId = 101;
-            Employee2 employee = employeeCollection[employeeId];
-            if (employee != null)
+            Console.WriteLine("Enter number of Employees ");
+            int count = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("*****************");
+            Console.WriteLine("Enter Employee Details");
+            Console.WriteLine("-----------------");
+            for (int i = 0; i < count; i++)
             {
-                Console.WriteLine($"Employee ID: {employee.Id}");
-                Console.WriteLine($"Name: {employee.Name}");
-                Console.WriteLine($"Salary: {employee.Salary}");
+                GenericIndexer.GetDetails();
             }
-            else
-            {
-                Console.WriteLine($"Employee with ID {employeeId} not found.");
-            }
+            Console.ReadLine();
         }
     }
 }
