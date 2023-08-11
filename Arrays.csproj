@@ -50,7 +50,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Array.Commanddemo</StartupObject>
+    <StartupObject>Array.Asyncdemo</StartupObject>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup />
@@ -78,6 +78,7 @@
   <ItemGroup>
     <Compile Include="Abstractiondemo.cs" />
     <Compile Include="ArrayList.cs" />
+    <Compile Include="Asyncdemo.cs" />
     <Compile Include="Attendance.cs" />
     <Compile Include="Attributedemo.cs" />
     <Compile Include="bonus.cs" />
