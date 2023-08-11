@@ -50,7 +50,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Array.CustomAttribute</StartupObject>
+    <StartupObject>Array.Commanddemo</StartupObject>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup />
@@ -81,7 +81,10 @@
     <Compile Include="Attendance.cs" />
     <Compile Include="Attributedemo.cs" />
     <Compile Include="bonus.cs" />
+    <Compile Include="Cgdemo.cs" />
     <Compile Include="Colordemo.cs" />
+    <Compile Include="Commanddemo.cs" />
+    <Compile Include="Constdemo.cs" />
     <Compile Include="Customdemo.cs" />
     <Compile Include="datastruct.cs" />
     <Compile Include="Debugdemo.cs" />
@@ -105,6 +108,7 @@
     <Compile Include="Swaping.cs" />
     <Compile Include="taskthree.cs" />
     <Compile Include="Trydemo.cs" />
+    <Compile Include="Tubledemo.cs" />
     <Compile Include="Virtualdemo.cs" />
   </ItemGroup>
   <ItemGroup>
