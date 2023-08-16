@@ -50,7 +50,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Array.Asyncdemo</StartupObject>
+    <StartupObject>Array.Recordinherit</StartupObject>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup />
@@ -102,6 +102,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="queue.cs" />
+    <Compile Include="Recordinherit.cs" />
+    <Compile Include="Recordstructdemo.cs" />
     <Compile Include="Regularexpdemo.cs" />
     <Compile Include="Sealeddemo.cs" />
     <Compile Include="Simpleintdemo.cs" />
